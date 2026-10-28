@@ -1,0 +1,11 @@
+{
+  "partes_web_visera_identicas_a_original": 40,
+  "otras_partes_web_identicas_a_revision_anterior": 53,
+  "animaciones_glb": 1,
+  "canales_despiece": 9,
+  "referencia_visera_commit": "a030c7ae1e247e4e313ea2b3edbd65204a6b4a8f",
+  "altura_paneles_conservada_cm": 10.44,
+  "mallas_blender_visera_restauradas": 40,
+  "otras_mallas_blender_sin_cambios": 45,
+  "geometria_topologia_uv_y_posicion_verificadas": true
+}

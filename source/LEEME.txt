@@ -1,0 +1,93 @@
+MODELO PROCEDURAL DEL PROYECTO GORRA TÁCTICA
+
+crear_gorra.py genera el proyecto Blender, el GLB y visor-data.json.
+Requiere Blender 4.3+ o un intérprete Python con bpy 4.3+.
+GORRA_OUTPUT_DIR permite elegir la carpeta de salida.
+GORRA_RENDER=0 omite los renders para regenerar solo el modelo.
+
+pack_model.py convierte visor-data.json en dist/js/model-data.js usando Python
+estándar. Copia también los archivos .blend y .glb generados a dist/assets.
+
+paneles_copa.py divide la envolvente original en cuatro sólidos, elimina las
+costuras centrales frontal y posterior y abre los dos recortes triangulares.
+Unifica dial, soporte, laterales y cables en una malla editable con materiales
+y grupos de vértices. cables_laterales.py expone los tramos horizontales y cruzados entre las guías
+circulares, con pasos conectados al cableado interior que llega al dial.
+La geometría y la animación usan nueve conjuntos independientes. La interfaz
+ofrece ocho fichas: al seleccionar el Panel Delantero se incluye el escudo.
+assets/PLANOS.docx conserva el documento técnico original. Sus medidas y notas
+se transcriben en ../dist/js/technical-data.js sin alterar la geometría existente.
+
+REVISIÓN DE DETALLES
+La construcción incluye puntadas y nervaduras agrupadas para reducir objetos,
+trenza helicoidal en el borde, escudo curvado, hojas en relieve y acolchado.
+Los detalles finos conservan más geometría en la versión web optimizada.
+
+REVISIÓN DE TELA, PALETAS Y UNIONES
+textil.py define la trama normal de 1024 px, las UV a escala física y los
+materiales. Las superficies se convierten a mallas editables con UV antes de
+exportar. El generador mantiene las fórmulas para regenerar el diseño.
+El modelo por defecto usa gris/plata; textil.set_palette permite cambiar la
+paleta dentro de Blender desde Python. El visor ofrece las tres paletas
+mediante dist/js/textile.js, con la misma trama y colores.
+El formato binario añade UV float32 y el papel material de cada malla.
+El protector tiene un borde continuo cerrado y coincide con la elipse de la
+copa. La visera reduce la proyección central a 6,3 cm y aumenta la caída a
+aproximadamente 1,61 cm, con mayor curvatura transversal y 1° adicional de
+inclinación. ajuste_visera.py conserva el anclaje de la copa y prolonga
+las dos hebras del bordado hasta los extremos de unión. El material accent
+es compartido por el bordado y los laureles en las tres paletas: negro, gris y beige.
+El escudo DIPRO mantiene sus colores originales.
+
+MARGEN DEL BORDADO
+El recorrido mantiene la misma separación del borde exterior en el frente
+y en los remates laterales junto a la copa. Los dos laureles se recolocan
+hacia el interior para conservar espacio entre hojas y bordado. Se mantienen
+la curvatura, inclinación, colores y los nueve conjuntos del modelo.
+
+BORDE UNIFORME Y ESCUDO DIPRO
+acabados_dipro.py reconstruye la visera y su ribete con un perfil constante,
+remates simétricos y geometría cerrada. Sustituye el escudo genérico por un
+bajorrelieve curvado con la silueta, proporciones y textura de assets/DIPRO.png.
+Los símbolos y textos conservan la imagen original aplicada mediante UV;
+el contorno y las capas principales tienen volumen real.
+exportar_visor.py conserva las UV y separa el anverso y reverso del escudo.
+assets/dipro-relieve.npz contiene la malla precalculada. Para reconstruirla,
+ejecuta preparar_escudo.py con Python, NumPy, SciPy y Pillow instalados.
+
+AJUSTE FINAL
+Visera sin puntadas de hilo; conserva el bordado decorativo y los laureles.
+Escudo DIPRO 1 cm más abajo, adaptado a la superficie de la copa.
+
+PROTECTOR CERVICAL Y DIAL BOA
+El protector tiene dos pliegues horizontales, diagonales que se abren hacia
+los laterales y un panel inferior liso. Las puntadas siguen la superficie
+del acolchado; los remates se encuentran con el ribete exterior continuo.
+El botón del dial incorpora BOA en letras geométricas oscuras y centradas.
+
+ACABADO INTERIOR DEL PROTECTOR
+Forro continuo y liso, sin reproducir los pliegues exteriores en el reverso.
+Remates redondeados, UV propias del canto y trama interior más suave.
+El visor conserva la geometría del protector sin simplificar y sus normales
+con precisión de 16 bits para mantener la continuidad al girar la cámara.
+
+ESTADO ACTUAL: VISERA ORIGINAL RESTAURADA
+La visera es idéntica a la versión anterior al ajuste de 35 grados.
+Se conservan los cuatro paneles un 10% más bajos (aproximadamente 10,44 cm).
+El escudo, el sistema de ajuste, los cables, la banda y el protector cervical
+mantienen las modificaciones anteriores. La restauración se documenta en reviews/visera-original-restaurada.png.
+
+El visor inicia en negro. Las ocho imágenes de selección de piezas también son negras.
+
+
+REMATES SUPERIORES E ILUMINACIÓN
+Las cuatro costuras de unión y las ocho filas de puntadas terminan por
+separado bajo el botón, dejando libre el centro. Las puntadas mantienen
+separación lateral en la zona superior. El archivo conserva la visera
+original y los paneles al 90% de altura.
+
+El estudio usa cajas de luz amplias, relleno moderado y recorte posterior.
+La tela incorpora brillo textil sutil y menor relieve de la trama. El visor
+añade sombras de contacto y reflejos de estudio; mantiene sus tres opciones
+de iluminación. Renders vigentes: reviews/gorra-render-realista.png y
+reviews/detalle-costuras-boton.png.

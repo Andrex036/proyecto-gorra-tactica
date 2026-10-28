@@ -1,0 +1,59 @@
+{
+  "paneles": {
+    "Panel Delantero": {
+      "altura_anterior_cm": 11.602701334049925,
+      "altura_actual_cm": 10.442431358387694,
+      "reduccion_porcentaje": 9.999998640465213
+    },
+    "Panel Trasero": {
+      "altura_anterior_cm": 11.602701334049925,
+      "altura_actual_cm": 10.442431358387694,
+      "reduccion_porcentaje": 9.999998640465213
+    },
+    "Panel Lateral Izquierdo": {
+      "altura_anterior_cm": 11.602424317243276,
+      "altura_actual_cm": 10.442154341581045,
+      "reduccion_porcentaje": 10.000237398126032
+    },
+    "Panel Lateral Derecho": {
+      "altura_anterior_cm": 11.602424317243276,
+      "altura_actual_cm": 10.442154341581045,
+      "reduccion_porcentaje": 10.000237398126032
+    }
+  },
+  "bases_fijas": true,
+  "otras_piezas_sin_cambios": [
+    "02 Banda interior",
+    "Ribete continuo del protector cervical",
+    "Unión diagonal cervical izquierdo",
+    "Unión diagonal cervical derecho",
+    "Puntadas integradas del protector cervical",
+    "06 Protector cervical acolchado"
+  ],
+  "arco_frontal_total_grados": 35,
+  "union_visera_desplazamiento_mm": 0,
+  "franja_visera_fija_mm": 8,
+  "vertices_visera_fijos_verificados": 4597,
+  "transicion_lateral": "C2 por longitud del borde",
+  "espesor_visera_mm": [
+    2.49999312056508,
+    2.500006278793111
+  ],
+  "margen_bordado_mm": [
+    6.227022273831883,
+    6.228907894660537
+  ],
+  "escudo_mismo_ancho_alto_y_uv": true,
+  "mallas_principales_cerradas": true,
+  "error_maximo_conexion_cables_mm": 2.6855012744081983e-05,
+  "dial_boa_y_guias_sin_aplastamiento": true,
+  "exportaciones": {
+    "partes_visor": 93,
+    "grupos": 9,
+    "triangulos": 535839,
+    "partes_actualizadas": 44,
+    "glb_bytes": 18286860,
+    "animaciones_glb": 1,
+    "canales_despiece": 9
+  }
+}

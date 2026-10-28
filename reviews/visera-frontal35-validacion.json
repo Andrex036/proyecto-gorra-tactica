@@ -1,0 +1,26 @@
+{
+  "arco_frontal_total_grados": 34.99999872651107,
+  "tangente_por_extremo_grados": 17.499999363255537,
+  "radio_cm": 24.94132230477572,
+  "borde_union_desplazamiento_mm": 0,
+  "franja_protegida_mm": 8,
+  "vertices_protegidos_verificados": 4597,
+  "centro_frontal_sin_desplazamiento": true,
+  "otras_mallas_sin_cambios": 45,
+  "espesor_visera_mm": [
+    2.49999312056508,
+    2.500006278793111
+  ],
+  "margen_bordado_mm": [
+    6.227962967456568,
+    6.228801679623345
+  ],
+  "exportaciones": {
+    "web_partes_sin_cambios": 53,
+    "web_partes_visera_actualizadas": 40,
+    "grupos": 9,
+    "glb_bytes": 18286856,
+    "animaciones_glb": 1,
+    "canales_despiece": 9
+  }
+}

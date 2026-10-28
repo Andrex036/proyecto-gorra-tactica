@@ -1,0 +1,138 @@
+PROYECTO GORRA TÁCTICA · LANDING PAGE Y VISOR 3D
+
+INICIAR
+1. Descomprime el ZIP completo conservando todas las carpetas.
+2. Abre index.html en un navegador actualizado con WebGL y DecompressionStream.
+3. Gira con el ratón o el dedo; usa la rueda, el gesto de pellizcar o los botones
+   para cambiar el zoom. Usa las ocho tarjetas para aislar piezas y leer sus fichas.
+4. Los controles inferiores permiten elegir acabado, despiece, cámara e iluminación.
+
+No requiere instalación ni compilación. Los recursos del visor están incluidos;
+no necesita conexión para explorar el modelo.
+Si WebGL no está disponible, se muestran renders de referencia y las fichas
+técnicas permanecen accesibles. Los componentes individuales se muestran en negro.
+
+ARCHIVOS
+index.html              Estructura y textos de la landing page.
+css/styles.css          Diseño responsive y estilos.
+js/app.js               Interacciones, cámara y renderizado del modelo.
+js/dipro-texture.js     Imagen original del escudo DIPRO, incluida sin conexión.
+js/textile.js           Trama textil de 1024 px y tres paletas coordinadas.
+js/technical-data.js    Ocho fichas técnicas según PLANOS.docx y cámaras de piezas.
+js/model-data.js        Geometría optimizada, comprimida e incluida en la página.
+vendor/three.min.js     Three.js r160; licencia MIT en LICENSE-three.txt.
+assets/gorra_tactica.glb    Modelo portable con animación de separación.
+assets/gorra_tactica.blend  Proyecto editable de Blender.
+assets/gorra-desarmada.png  Render de referencia del despiece.
+assets/partes/          Renders de componentes y del modelo en negro, gris y beige.
+assets/plano-moldes.png Lámina original de moldes incluida en PLANOS.docx.
+assets/icono-proyecto-gorra.jpg  Imagen proporcionada para el icono de la página.
+
+PUBLICACIÓN EN OTRO SERVIDOR
+Sube index.html y las carpetas css, js, vendor y assets a un alojamiento estático.
+No cambies sus rutas relativas. El modelo se renderiza en el navegador.
+
+EDICIÓN
+Cambia los textos en index.html, el aspecto en css/styles.css y los controles en
+js/app.js. Edita las ocho fichas y sus cámaras en js/technical-data.js.
+El visor usa una copia optimizada del modelo; modificar
+el archivo .blend o .glb no actualiza automáticamente js/model-data.js.
+
+CONTENIDO DEL MODELO
+Panel Delantero, Panel Trasero, Panel Lateral Izquierdo, Panel Lateral Derecho,
+Sistema de ajuste, visera, protector cervical, escudo frontal y banda interior.
+Los paneles delantero y trasero no tienen costura central. Cada lateral tiene
+una abertura triangular real que encaja con su fuelle. Dial, soporte, laterales
+y cables forman un solo componente, conservando su posición de montaje.
+Los cables laterales se ven por fuera, de círculo a círculo, con dos recorridos
+horizontales y dos cruzados por lado. La conexión al dial permanece oculta.
+La escala y las proporciones son aproximadas. El despiece sirve para inspección
+visual. No hay simulación física ni cálculo de fabricación.
+
+FICHAS TÉCNICAS
+El visor presenta ocho componentes: el escudo se incluye con el Panel Delantero.
+El despiece conserva los nueve grupos geométricos originales. El plano agrupa
+el Panel Trasero y el protector cervical en un solo pliego; el visor permite
+inspeccionarlos por separado. Las medidas publicadas son las del documento,
+no mediciones de la geometría aproximada. La propuesta de capas de protección
+permanece pendiente de verificación, como indica la fuente.
+
+TECLADO
+Tab para recorrer los controles. Con el visor enfocado, flechas para girar,
++ y - para el zoom e Inicio para restablecer. El despiece respeta la preferencia
+del sistema de reducir movimiento.
+
+DETALLES DE LA REFERENCIA
+Puntadas dobles en los paneles, costura perimetral, trenza en la visera, hojas
+con nervaduras, escudo DIPRO en bajorrelieve, acolchado con refuerzos
+diagonales cosidos, trabillas laterales y dial estriado con base redondeada.
+El escudo combina contorno y capas en relieve con la textura original para
+conservar los textos y emblemas. Los detalles participan en el despiece. Se conserva el triángulo sin pliegue
+central, ajustado a la copa. La interpretación sigue siendo aproximada a partir de imágenes.
+
+TELA Y COLORES
+Elige Negro, Gris o Beige en los controles inferiores del visor. Los laureles
+y el bordado perimetral cambian a dorado (negro/beige) o plata (gris). El color se
+conserva al separar piezas, aislar conjuntos y restablecer la cámara.
+El escudo DIPRO conserva sus colores originales en todas las paletas.
+La textura normal de tela se genera localmente, incluye filtrado y mipmaps
+y no necesita conexión. La misma trama se incorpora a los archivos GLB y
+Blender, en negro por defecto. Las piezas siguen siendo mallas editables.
+
+ILUMINACIÓN
+Estudio ofrece iluminación equilibrada con luz de contorno; Luz suave reduce
+el contraste; Interior y detalles añade relleno inferior y frontal para
+inspeccionar forros, uniones y el mecanismo. La luz frontal sigue la cámara.
+
+UNIÓN CERVICAL Y VISERA
+El protector tiene un ribete continuo cerrado y remates superiores alineados
+con el borde elíptico de la copa. La visera tiene 6,3 cm de proyección central
+y aproximadamente 1,61 cm de caída central. Incorpora mayor curvatura
+transversal y 1° adicional de inclinación; el bordado llega hasta la copa.
+
+MARGEN DEL BORDADO
+El recorrido mantiene la misma separación del borde exterior en el frente
+y en los remates laterales junto a la copa. Los dos laureles se recolocan
+hacia el interior para conservar espacio entre hojas y bordado. Se mantienen
+la curvatura, inclinación, colores y los nueve conjuntos del modelo.
+
+BORDE DE LA VISERA
+El ribete tiene una sección constante de 2,6 mm, con uniones simétricas
+y continuas junto a la copa. Se conserva el margen uniforme del bordado.
+
+AJUSTE FINAL
+Visera sin puntadas de hilo; conserva el bordado decorativo y los laureles.
+Escudo DIPRO 1 cm más abajo, adaptado a la superficie de la copa.
+
+PROTECTOR CERVICAL Y DIAL BOA
+El protector tiene dos pliegues horizontales, diagonales que se abren hacia
+los laterales y un panel inferior liso. Las puntadas siguen la superficie
+del acolchado; los remates se encuentran con el ribete exterior continuo.
+El botón del dial incorpora BOA en letras geométricas oscuras y centradas.
+
+ACABADO INTERIOR DEL PROTECTOR
+Forro continuo y liso, sin reproducir los pliegues exteriores en el reverso.
+Remates redondeados, UV propias del canto y trama interior más suave.
+El visor conserva la geometría del protector sin simplificar y sus normales
+con precisión de 16 bits para mantener la continuidad al girar la cámara.
+
+ESTADO ACTUAL: VISERA ORIGINAL RESTAURADA
+La visera es idéntica a la versión anterior al ajuste de 35 grados.
+Se conservan los cuatro paneles un 10% más bajos (aproximadamente 10,44 cm).
+El escudo, el sistema de ajuste, los cables, la banda y el protector cervical
+mantienen las modificaciones anteriores. La restauración se documenta en reviews/visera-original-restaurada.png.
+
+El visor inicia en negro. Las ocho imágenes de selección de piezas también son negras.
+
+
+REMATES SUPERIORES E ILUMINACIÓN
+Las cuatro costuras de unión y las ocho filas de puntadas terminan por
+separado bajo el botón, dejando libre el centro. Las puntadas mantienen
+separación lateral en la zona superior. El archivo conserva la visera
+original y los paneles al 90% de altura.
+
+El estudio usa cajas de luz amplias, relleno moderado y recorte posterior.
+La tela incorpora brillo textil sutil y menor relieve de la trama. El visor
+añade sombras de contacto y reflejos de estudio; mantiene sus tres opciones
+de iluminación. Renders vigentes: reviews/gorra-render-realista.png y
+reviews/detalle-costuras-boton.png.

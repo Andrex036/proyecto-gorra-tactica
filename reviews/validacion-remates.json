@@ -1,0 +1,24 @@
+{
+  "mallas_modificadas": [
+    "Costura panel 01",
+    "Costura panel 02",
+    "Costura panel 04",
+    "Costura panel 05",
+    "Puntadas dobles de los paneles | Panel Delantero",
+    "Puntadas dobles de los paneles | Panel Lateral Derecho",
+    "Puntadas dobles de los paneles | Panel Lateral Izquierdo",
+    "Puntadas dobles de los paneles | Panel Trasero"
+  ],
+  "mallas_conservadas_exactamente": 77,
+  "vertices_de_remate_dentro_del_boton": 224,
+  "radio_libre_central_cm": 0.1808305274182186,
+  "paneles_altura_factor": 0.9,
+  "color_inicial": "negro",
+  "partes_web_modificadas": 8,
+  "partes_web_conservadas_exactamente": 85,
+  "partes_visera_identicas_original": 40,
+  "animaciones_glb": 1,
+  "canales_despiece": 9,
+  "renders_actualizados": 12,
+  "render_webgl_en_navegador": "No verificado: WebGL deshabilitado en el entorno de revisión. Geometría y renders de Blender verificados."
+}
