@@ -7,7 +7,6 @@
   const viewInput=$('view'),wireInput=$('wireframe'),separationInput=$('separation');
   const technical=window.GORRA_TECHNICAL;
   const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-  const defaultZoom=1.23;
   let engine=null,currentColor='negro',fallback=false;
   const presets={tres:[.66,.32],frente:[0,.15],lado:[Math.PI/2,.12],izquierda:[-Math.PI/2,.12],atras:[Math.PI,.18],superior:[.35,1.35],abajo:[.5,-.9]};
   const renderControls=['view','wireframe','separation','lighting','zoom-in','zoom-out','mode-assembled','mode-exploded','hero-explode','reset-model'];
@@ -36,7 +35,7 @@
   }
   function updateFallback(){
     const key=pieceInput.value,img=$('model-fallback');
-    img.src=key==='todas'?`assets/partes/modelo-${currentColor}.png?v=remates-luz-20261028`:`assets/partes/${key}.png?v=remates-luz-20261028`;
+    img.src=key==='todas'?`assets/partes/modelo-${currentColor}.png?v=gorra-v2-20261030`:`assets/partes/${key}.png?v=gorra-v2-20261030`;
     img.alt=key==='todas'?`Vista de la gorra en ${currentColor}`:`Vista de referencia de ${technical[key].name} en negro`;
     if(key!=='todas')$('finish-color').textContent='REFERENCIA EN NEGRO';
     else $('finish-color').textContent=`${currentColor} / ${window.GORRA_TEXTILE.palettes[currentColor].contrast}`.toUpperCase();
@@ -181,7 +180,7 @@
     function setLighting(name){const values=lightPresets[name]||lightPresets.estudio;[hemi,keyLight,fillLight,rimLight,lowerLight,cameraFill].forEach((light,i)=>light.intensity=values[i]);renderer.toneMappingExposure=values[6];shell.dataset.lighting=name;requestRender();}
     const canvas=renderer.domElement;canvas.tabIndex=0;canvas.setAttribute('role','img');
     canvas.setAttribute('aria-label','Gorra en 3D. Arrastra para girar; rueda o pellizco para acercar. Usa las flechas, más, menos e Inicio con el teclado.');stage.append(canvas);
-    let theta=.66,phi=.32,zoom=defaultZoom,separation=0,fitPoints=[],animation=0,frame=0,contextLost=false;
+    let theta=.66,phi=.32,zoom=1,separation=0,fitPoints=[],animation=0,frame=0,contextLost=false;
     const focus=new THREE.Vector3(),direction=new THREE.Vector3(),right=new THREE.Vector3(),up=new THREE.Vector3(),worldUp=new THREE.Vector3(0,1,0);
     function render(){
       frame=0;if(contextLost)return;
@@ -189,7 +188,7 @@
       const tangent=Math.tan(camera.fov*Math.PI/360);let fit=1;
       for(let i=0;i<fitPoints.length;i+=3){const x=fitPoints[i]-focus.x,y=fitPoints[i+1]-focus.y,z=fitPoints[i+2]-focus.z,depth=x*direction.x+y*direction.y+z*direction.z;
         fit=Math.max(fit,depth+Math.abs(x*up.x+y*up.y+z*up.z)/tangent,depth+Math.abs(x*right.x+y*right.y+z*right.z)/(tangent*camera.aspect));}
-      camera.position.copy(direction).multiplyScalar(fit*1.30/zoom).add(focus);camera.lookAt(focus);renderer.render(scene,camera);
+      camera.position.copy(direction).multiplyScalar(fit*1.12/zoom).add(focus);camera.lookAt(focus);renderer.render(scene,camera);
     }
     function requestRender(){if(!frame)frame=requestAnimationFrame(render);}
     function applyColor(key){const palette=textile.palettes[key];for(const [role,material]of Object.entries(materials)){if(palette[role]!==undefined)material.color.set(palette[role]);}requestRender();}
@@ -211,10 +210,10 @@
     function cancelAnimation(){if(animation)cancelAnimationFrame(animation);animation=0;}
     function syncZoom(){$('zoom-value').textContent=`${Math.round(zoom*100)} %`;$('zoom-out').disabled=zoom<=.65;$('zoom-in').disabled=zoom>=2.5;}
     function setZoom(value){zoom=Math.max(.65,Math.min(2.5,value));syncZoom();requestRender();}
-    function animateSeparation(target){cancelAnimation();zoom=defaultZoom;syncZoom();const from=separation;if(reducedMotion.matches||from===target){separation=target;updateParts();return;}const start=performance.now();function tick(now){const progress=Math.min((now-start)/650,1),smooth=progress*progress*(3-2*progress);separation=from+(target-from)*smooth;updateParts(false);if(progress<1)animation=requestAnimationFrame(tick);else{animation=0;announce();}}animation=requestAnimationFrame(tick);}
+    function animateSeparation(target){cancelAnimation();zoom=1;syncZoom();const from=separation;if(reducedMotion.matches||from===target){separation=target;updateParts();return;}const start=performance.now();function tick(now){const progress=Math.min((now-start)/650,1),smooth=progress*progress*(3-2*progress);separation=from+(target-from)*smooth;updateParts(false);if(progress<1)animation=requestAnimationFrame(tick);else{animation=0;announce();}}animation=requestAnimationFrame(tick);}
     function setView(key){const value=key==='pieza'?(technical[pieceInput.value]?.view||presets.tres):presets[key];if(value)[theta,phi]=value;requestRender();}
-    function selectEnginePiece(key){cancelAnimation();separation=0;zoom=defaultZoom;syncZoom();viewInput.value=key==='todas'?'tres':'pieza';setView(viewInput.value);updateParts();}
-    function reset(){cancelAnimation();separation=0;zoom=defaultZoom;[theta,phi]=presets.tres;viewInput.value='tres';wireInput.checked=false;for(const mesh of meshes)mesh.material.wireframe=false;stage.classList.remove('interacted');syncZoom();updateParts();}
+    function selectEnginePiece(key){cancelAnimation();separation=0;zoom=1;syncZoom();viewInput.value=key==='todas'?'tres':'pieza';setView(viewInput.value);updateParts();}
+    function reset(){cancelAnimation();separation=0;zoom=1;[theta,phi]=presets.tres;viewInput.value='tres';wireInput.checked=false;for(const mesh of meshes)mesh.material.wireframe=false;stage.classList.remove('interacted');syncZoom();updateParts();}
     const pointers=new Map();let oldDistance=0;
     canvas.addEventListener('pointerdown',event=>{if(event.button!==0)return;canvas.setPointerCapture(event.pointerId);pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});oldDistance=0;stage.classList.add('interacted');});
     canvas.addEventListener('pointermove',event=>{if(!pointers.has(event.pointerId))return;const previous=pointers.get(event.pointerId);pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});if(pointers.size===1){theta-=(event.clientX-previous.x)*.009;phi=Math.max(-1.45,Math.min(1.45,phi+(event.clientY-previous.y)*.009));}else{const[a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y);if(oldDistance)setZoom(zoom*distance/oldDistance);oldDistance=distance;}requestRender();});

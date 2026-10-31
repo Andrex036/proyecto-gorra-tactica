@@ -39,11 +39,12 @@ El visor usa una copia optimizada del modelo; modificar
 el archivo .blend o .glb no actualiza automáticamente js/model-data.js.
 
 CONTENIDO DEL MODELO
-Panel Delantero, Panel Trasero, Panel Lateral Izquierdo, Panel Lateral Derecho,
-Sistema de ajuste, visera, protector cervical, escudo frontal y banda interior.
-Los paneles delantero y trasero no tienen costura central. Cada lateral tiene
-una abertura triangular real que encaja con su fuelle. Dial, soporte, laterales
-y cables forman un solo componente, conservando su posición de montaje.
+Panel Delantero, Panel Trasero y Protector Cervical, Panel Lateral Izquierdo,
+Panel Lateral Derecho, Sistema de ajuste, Triángulos laterales, visera, escudo
+frontal y banda interior. El panel trasero y el protector cervical forman una
+pieza y una sola selección. Los dos triángulos laterales son un componente
+independiente que encaja con las aberturas de los paneles. Dial, soporte,
+laterales y cables forman un solo componente, conservando su posición.
 Los cables laterales se ven por fuera, de círculo a círculo, con dos recorridos
 horizontales y dos cruzados por lado. La conexión al dial permanece oculta.
 La escala y las proporciones son aproximadas. El despiece sirve para inspección
@@ -51,11 +52,16 @@ visual. No hay simulación física ni cálculo de fabricación.
 
 FICHAS TÉCNICAS
 El visor presenta ocho componentes: el escudo se incluye con el Panel Delantero.
-El despiece conserva los nueve grupos geométricos originales. El plano agrupa
-el Panel Trasero y el protector cervical en un solo pliego; el visor permite
-inspeccionarlos por separado. Las medidas publicadas son las del documento,
+El despiece conserva los nueve grupos geométricos. El Panel Trasero y el
+protector cervical se seleccionan juntos, mientras los triángulos laterales
+son una pieza independiente. Las medidas publicadas son las del documento,
 no mediciones de la geometría aproximada. La propuesta de capas de protección
 permanece pendiente de verificación, como indica la fuente.
+
+ESPECIFICACIONES BALÍSTICAS PROYECTADAS
+La página presenta el objetivo NIJ II-A, 9,00 mm de espesor y cinco años de
+vida útil como parámetros conceptuales pendientes de validación. No representan
+certificación ni garantía de detención. Retirar el producto tras un impacto real.
 
 TECLADO
 Tab para recorrer los controles. Con el visor enfocado, flechas para girar,

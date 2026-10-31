@@ -40,51 +40,59 @@ window.GORRA_TECHNICAL = {
     ]
   },
   "panel_trasero": {
-    "name": "Panel trasero",
-    "tag": "Copa posterior",
-    "measure": "17,0 cm",
-    "measureLabel": "Altura de la copa en el molde",
-    "quantity": "1 pliego con el protector",
-    "summary": "Panel posterior unificado. En el plano comparte un solo pliego con el protector cervical.",
+    "name": "Panel trasero y protector cervical",
+    "tag": "Pieza posterior unificada",
+    "measure": "19,4 × 25,5 cm",
+    "measureLabel": "Ancho × alto del molde conjunto",
+    "quantity": "1 pieza",
+    "summary": "Panel trasero y protector cervical unidos en una sola pieza. Conserva los pliegues, las costuras y el forro; se selecciona y se desplaza completa en el despiece.",
     "details": [
       [
-        "Altura actual del modelo 3D",
+        "Altura actual de la copa 3D",
         "10,44 cm · reducción del 10%"
       ],
       [
-        "Base de montaje",
-        "Ancho y encaje inferior conservados"
+        "Altura de copa en el molde",
+        "17,0 cm"
       ],
       [
-        "Molde conjunto",
-        "19,4 × 25,5 cm en total"
+        "Caída cervical del molde",
+        "8,5 cm"
       ],
       [
-        "Ancho superior",
+        "Ancho superior del molde",
         "19,4 cm"
       ],
       [
-        "Continuidad",
-        "Panel trasero + protector cervical"
+        "Reducción del protector",
+        "19,4 → 17,0 → 12,0 cm → vértice"
+      ],
+      [
+        "Construcción",
+        "Panel y protector en una pieza; pliegues y forro conservados"
+      ],
+      [
+        "Costuras del plano",
+        "Discontinuas; canales de articulación acolchados"
       ],
       [
         "Margen de costura",
         "Añadir 1,0 cm antes de cortar"
       ]
     ],
-    "note": "El visor permite inspeccionar por separado la copa posterior y el protector cervical; el plano los presenta en un mismo molde. Actualización del modelo: paneles un 10% más bajos. Las cotas de corte mostradas corresponden al plano original.",
+    "note": "La selección y el despiece presentan el panel trasero y el protector cervical como una sola pieza, de acuerdo con el molde conjunto del plano. Las cotas de corte son las originales; la copa 3D mantiene la reducción de altura del 10%.",
     "view": [
       3.14,
-      0.18
+      0.12
     ]
   },
   "panel_izquierdo": {
     "name": "Panel lateral izquierdo",
-    "tag": "Abertura triangular",
-    "measure": "20,2 × 15,0 cm",
+    "tag": "Vértice superior · base abierta",
+    "measure": "11,6 × 15,0 cm",
     "measureLabel": "Ancho × alto del molde",
     "quantity": "1 de los 2 paneles laterales",
-    "summary": "Panel bipartito con dos aletas inferiores y una abertura central en V para el ajuste.",
+    "summary": "Panel bipartito con abertura triangular desde el borde inferior y vértice hacia arriba, coincidente con su triángulo independiente.",
     "details": [
       [
         "Altura actual del modelo 3D",
@@ -99,16 +107,12 @@ window.GORRA_TECHNICAL = {
         "4,3 cm cada una"
       ],
       [
-        "Ancho central entre aletas",
-        "11,6 cm"
-      ],
-      [
         "Abertura en V",
         "3,0 cm"
       ],
       [
-        "Altura hasta el vértice de la V",
-        "9,5 cm"
+        "Vértice de pivote",
+        "A 9,5 cm"
       ],
       [
         "Fuelle interior asociado",
@@ -119,7 +123,7 @@ window.GORRA_TECHNICAL = {
         "Añadir 1,0 cm antes de cortar"
       ]
     ],
-    "note": "Ancho total del molde: 4,3 + 11,6 + 4,3 = 20,2 cm. El fuelle triangular va cosido detrás de la abertura. El mecanismo se puede revisar en “Sistema de ajuste”. El modelo 3D mantiene su geometría actual; estas son cotas del molde.",
+    "note": "El triángulo se consulta en “Triángulos laterales”. La abertura 3D conserva sus dimensiones anteriores y se orienta con la base abajo. Las cotas de corte y el pivote a 9,5 cm corresponden al plano original; no se ha escalado el modelo a esas cotas.",
     "view": [
       -1.57,
       0.12
@@ -127,11 +131,11 @@ window.GORRA_TECHNICAL = {
   },
   "panel_derecho": {
     "name": "Panel lateral derecho",
-    "tag": "Abertura triangular",
-    "measure": "20,2 × 15,0 cm",
+    "tag": "Vértice superior · base abierta",
+    "measure": "11,6 × 15,0 cm",
     "measureLabel": "Ancho × alto del molde",
     "quantity": "1 de los 2 paneles laterales",
-    "summary": "Panel bipartito con dos aletas inferiores y una abertura central en V para el ajuste.",
+    "summary": "Panel bipartito con abertura triangular desde el borde inferior y vértice hacia arriba, coincidente con su triángulo independiente.",
     "details": [
       [
         "Altura actual del modelo 3D",
@@ -146,16 +150,12 @@ window.GORRA_TECHNICAL = {
         "4,3 cm cada una"
       ],
       [
-        "Ancho central entre aletas",
-        "11,6 cm"
-      ],
-      [
         "Abertura en V",
         "3,0 cm"
       ],
       [
-        "Altura hasta el vértice de la V",
-        "9,5 cm"
+        "Vértice de pivote",
+        "A 9,5 cm"
       ],
       [
         "Fuelle interior asociado",
@@ -166,7 +166,7 @@ window.GORRA_TECHNICAL = {
         "Añadir 1,0 cm antes de cortar"
       ]
     ],
-    "note": "Ancho total del molde: 4,3 + 11,6 + 4,3 = 20,2 cm. El fuelle triangular va cosido detrás de la abertura. El mecanismo se puede revisar en “Sistema de ajuste”. El modelo 3D mantiene su geometría actual; estas son cotas del molde.",
+    "note": "El triángulo se consulta en “Triángulos laterales”. La abertura 3D conserva sus dimensiones anteriores y se orienta con la base abajo. Las cotas de corte y el pivote a 9,5 cm corresponden al plano original; no se ha escalado el modelo a esas cotas.",
     "view": [
       1.57,
       0.12
@@ -189,26 +189,57 @@ window.GORRA_TECHNICAL = {
         "Oculto hacia el dial; zigzag visible en los laterales"
       ],
       [
-        "Canales de articulación",
-        "Acolchados, con costuras discontinuas"
-      ],
-      [
-        "Fuelles internos",
-        "2 piezas de 4,0 × 10,0 cm"
+        "Túnel guía posterior",
+        "19,4 × 1,5 cm; 1 pieza"
       ],
       [
         "Ubicación del dial",
         "Centro exterior de la nuca"
       ],
       [
-        "Circunferencia indicada en el plano",
-        "58–62 cm"
+        "Rango de ajuste propuesto",
+        "56–62 cm; base nominal de 58 cm"
       ]
     ],
-    "note": "El documento sitúa el dial por fuera de la capa protectora, sin perforarla. El visor representa el conjunto; no simula el tensado del cable.",
+    "note": "El documento sitúa el dial por fuera de la capa protectora, sin perforarla. El visor representa el conjunto; no simula el tensado del cable. Los dos triángulos se seleccionan y se separan como otro componente.",
     "view": [
       2.55,
       0.32
+    ]
+  },
+  "triangulos": {
+    "name": "Triángulos laterales",
+    "tag": "Dos triángulos · punta arriba",
+    "measure": "3,20 × 3,64 cm",
+    "measureLabel": "Ancho × alto de cada cuerpo en el modelo",
+    "quantity": "2 triángulos en 1 componente seleccionable",
+    "summary": "Par de triángulos independientes del mecanismo, con la base sobre el borde inferior de los paneles y el vértice hacia arriba. Ambos se desplazan juntos en el despiece.",
+    "details": [
+      [
+        "Orientación",
+        "Base abajo · punta arriba"
+      ],
+      [
+        "Encaje",
+        "Aberturas laterales coincidentes"
+      ],
+      [
+        "Dimensiones actuales",
+        "Ancho y alto conservados, sin escalar"
+      ],
+      [
+        "Acabados",
+        "Cuerpo, ribete, puntadas y forro"
+      ],
+      [
+        "Fuelles del plano original",
+        "2 piezas de 4,0 × 10,0 cm"
+      ]
+    ],
+    "note": "Las medidas principales describen el cuerpo 3D actual sin el ribete. Las cotas de corte pertenecen al plano original. Dial, guías y cables permanecen en “Sistema de ajuste”.",
+    "view": [
+      0.58,
+      0.2
     ]
   },
   "visera": {
@@ -217,11 +248,19 @@ window.GORRA_TECHNICAL = {
     "measure": "18,0 × 7,0 cm",
     "measureLabel": "Ancho × largo del molde",
     "quantity": "2 piezas de tela + 1 núcleo",
-    "summary": "Visera curva con núcleo de polímero rígido y laureles bordados en el exterior.",
+    "summary": "Visera con su curva original y contorno redondeado. Conserva el diseño actual de dos ramas de laureles por lado y el bordado perimetral festoneado.",
     "details": [
       [
         "Diseño actual",
-        "Curvatura original restaurada"
+        "Curva original y contorno redondeado"
+      ],
+      [
+        "Bordado de laureles",
+        "2 ramas por lado · base lateral común"
+      ],
+      [
+        "Hojas y tallos",
+        "Hojas lobuladas, nervaduras finas y pequeños brotes según la referencia"
       ],
       [
         "Espesor del núcleo",
@@ -232,53 +271,14 @@ window.GORRA_TECHNICAL = {
         "Polímero rígido"
       ],
       [
-        "Acabado exterior",
-        "Laureles bordados"
-      ],
-      [
         "Margen de costura",
         "Añadir 1,0 cm antes de cortar"
       ]
     ],
-    "note": "Las dimensiones corresponden al molde de corte de PLANOS.docx. La visera recupera su diseño anterior al ajuste de 35°, incluidos borde, bordado y laureles.",
+    "note": "Las dimensiones corresponden al molde de corte de PLANOS.docx. El cuerpo y el ribete recuperan su geometría original, incluido el asiento en los paneles. Se mantiene el diseño de los laureles con base común, pequeños brotes y borde festoneado, adaptado al contorno curvo. Las medidas del molde no se han alterado.",
     "view": [
       0.2,
       0.78
-    ]
-  },
-  "cervical": {
-    "name": "Protector cervical",
-    "tag": "Caída posterior en V",
-    "measure": "8,5 cm",
-    "measureLabel": "Caída cervical del molde",
-    "quantity": "Parte del pliego posterior",
-    "summary": "Continuación del panel trasero que cubre la región cervical, con reducción progresiva hacia el vértice.",
-    "details": [
-      [
-        "Molde conjunto",
-        "19,4 × 25,5 cm con el panel trasero"
-      ],
-      [
-        "Reducción de ancho",
-        "19,4 → 17,0 → 12,0 cm → vértice"
-      ],
-      [
-        "Construcción del plano",
-        "Canales de articulación acolchados"
-      ],
-      [
-        "Costuras del plano",
-        "Discontinuas"
-      ],
-      [
-        "Margen de costura",
-        "Añadir 1,0 cm antes de cortar"
-      ]
-    ],
-    "note": "La imagen del plano muestra el protector continuo con el panel trasero. Aquí se aísla para facilitar su inspección.",
-    "view": [
-      3.14,
-      0.08
     ]
   },
   "banda": {
